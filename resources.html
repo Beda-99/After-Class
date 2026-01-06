@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image & videos/logo.png" type="image/x-icon">
+    <title>Academic Library | AFTER CLASS🖱</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kinder: #ff4757; --primary: #2ed573; --secondary: #3742fa;
+            --tss: #f39c12; --dark: #0f172a; --bg: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: var(--bg); color: var(--dark); min-height: 100vh; display: flex; flex-direction: column; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: var(--dark); padding: 1rem 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .logo { color: white; font-weight: 800; font-size: 1.4rem; text-decoration: none; }
+        .logo span { color: #fbbf24; }
+        .nav-links a { color: #94a3b8; text-decoration: none; margin-left: 20px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: white; }
+
+        /* --- SEARCH HEADER --- */
+        .header {
+            background: var(--dark); color: white; padding: 60px 8% 80px; text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .search-container { max-width: 600px; margin: 25px auto -20px; position: relative; }
+        .search-container input {
+            width: 100%; padding: 18px 25px; border-radius: 12px; border: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); font-size: 1rem; outline: none;
+        }
+
+        /* --- FILTER TABS --- */
+        .tabs { display: flex; justify-content: center; gap: 10px; margin: 50px 0 30px; flex-wrap: wrap; padding: 0 5%; }
+        .tab-btn {
+            padding: 12px 24px; border-radius: 8px; border: none; background: white;
+            cursor: pointer; font-weight: 700; color: var(--dark); transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .tab-btn.active { background: var(--dark); color: white; transform: translateY(-3px); }
+
+        /* --- CONTENT GRID --- */
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px; padding: 0 8% 80px; max-width: 1400px; margin: 0 auto; width: 100%;
+        }
+
+        .book-card {
+            background: white; border-radius: 15px; padding: 25px;
+            border-left: 6px solid #eee; transition: 0.4s;
+            display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .book-card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); }
+        
+        .k-line { border-color: var(--kinder); }
+        .p-line { border-color: var(--primary); }
+        .s-line { border-color: var(--secondary); }
+        .t-line { border-color: var(--tss); }
+
+        .tag { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+        .book-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--dark); }
+        .book-card p { font-size: 0.85rem; color: #64748b; margin-bottom: 20px; flex-grow: 1; }
+
+        .btn-dl {
+            background: #f8fafc; color: var(--dark); text-decoration: none;
+            padding: 12px; border-radius: 8px; text-align: center;
+            font-weight: 700; font-size: 0.8rem; border: 1px solid #e2e8f0; transition: 0.3s;
+        }
+        .btn-dl:hover { background: var(--dark); color: white; }
+
+        /* --- FOOTER --- */
+        footer { background: var(--dark); color: #94a3b8; padding: 60px 8% 30px; margin-top: auto; }
+        .f-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
+        .f-grid h4 { color: white; margin-bottom: 20px; }
+        .f-bottom { text-align: center; border-top: 1px solid #1e293b; margin-top: 40px; padding-top: 20px; font-size: 0.8rem; }
+        .btn {
+            background:orange;
+             color: white;
+              padding: 1rem 2rem;
+            border-radius: 14px;
+             text-decoration: none;
+              font-weight: 700;
+            display: inline-block;
+             border: none; 
+             text-align: center;
+              width: 100%;
+        }
+        .btn-sec {
+             background: var(--secondary);
+             }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">AFTER CLASS<span></span>🖱</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="contact.html">Contact</a>
+             <a href="resources.html" style="color: blue;">Resources</a>
+             <a href="our vision.html" >Our Vision</a>
+            <a href="curriclum.html">Curriculum</a>
+             <a href="help center.html" >Help Center</a>
+             <a href="create.html" class="btn" style="padding: 0.6rem 1.2rem; font-size: 0.8rem; width: auto;">Log In</a>
+
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>Academic Bookshelf</h1>
+        <p>Providing 800+ educational materials for all levels of learning.</p>
+        <div class="search-container">
+            <input type="text" id="userSearch" placeholder="Search for a book (e.g. Physics, Phonics, Masonry)..." onkeyup="updateDisplay()">
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="setFilter('all')">All Books</button>
+        <button class="tab-btn" onclick="setFilter('kinder')">Kindergarten</button>
+        <button class="tab-btn" onclick="setFilter('primary')">Primary</button>
+        <button class="tab-btn" onclick="setFilter('secondary')">Secondary</button>
+        <button class="tab-btn" onclick="setFilter('tss')">TSS / TVET</button>
+    </div>
+
+    <main class="grid" id="bookGrid"></main>
+
+    <footer>
+        <div class="f-grid">
+            <div><h4>AFTER CLASS🖱</h4><p>Digital learning hub for the next generation of Rwandan scholars.</p></div>
+            <div><h4>Categories</h4><p>Science & Tech</p><p>Language Arts</p><p>Technical Skills</p></div>
+            <div><h4>Support</h4><p>bedakwihangana1@gmail.com</p><p>Kigali, Rwanda</p></div>
+        </div>
+        <div class="f-bottom">&copy; 2025 AFTER CLASS🖱 - All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        // --- 1. THE DATA (Add as many as you want here) ---
+        const libraryData = [
+            // KINDERGARTEN (Repeat rows to get to 200)
+            { level: 'kinder', title: 'Fun with Phonics 1', desc: 'Alphabet basics and sound recognition.', file: 'k_phonics_1.pdf' },
+            { level: 'kinder', title: 'Math for Toddlers', desc: 'Learn counting with colorful shapes.', file: 'k_math_1.pdf' },
+            
+            // PRIMARY (Repeat rows to get to 200)
+            { level: 'primary', title: 'Primary 4 Science', desc: 'Understanding plants and environments.', file: 'p4_sci.pdf' },
+            { level: 'primary', title: 'National Exam Prep P6', desc: 'Past paper collection for P6 students.', file: 'p6_prep.pdf' },
+
+            // SECONDARY (Repeat rows to get to 200)
+            { level: 'secondary', title: 'Senior 4 Physics', desc: 'Mechanics, Heat, and Energy modules.', file: 's4_phy.pdf' },
+            { level: 'secondary', title: 'Senior 6 History', desc: 'Post-Genocide transformation and unity.', file: 's6_hist.pdf' },
+
+            // TSS / TVET (Repeat rows to get to 200)
+            { level: 'tss', title: 'Electronics Level 3', desc: 'Soldering and circuit board basics.', file: 'tss_elec.pdf' },
+            { level: 'tss', title: 'Culinary Arts Manual', desc: 'Food safety and hospitality standards.', file: 'tss_chef.pdf' },
+        ];
+
+        let currentFilter = 'all';
+
+        // --- 2. THE ENGINE (Displays the books) ---
+        function updateDisplay() {
+            const grid = document.getElementById('bookGrid');
+            const search = document.getElementById('userSearch').value.toLowerCase();
+            grid.innerHTML = '';
+
+            const filteredBooks = libraryData.filter(book => {
+                const matchesLevel = (currentFilter === 'all' || book.level === currentFilter);
+                const matchesSearch = book.title.toLowerCase().includes(search);
+                return matchesLevel && matchesSearch;
+            });
+
+            filteredBooks.forEach(book => {
+                const colorMap = { kinder: '#ff4757', primary: '#2ed573', secondary: '#3742fa', tss: '#f39c12' };
+                const lineMap = { kinder: 'k-line', primary: 'p-line', secondary: 's-line', tss: 't-line' };
+                
+                grid.innerHTML += `
+                    <div class="book-card ${lineMap[book.level]}">
+                        <span class="tag" style="color: ${colorMap[book.level]}">${book.level}</span>
+                        <h3>${book.title}</h3>
+                        <p>${book.desc}</p>
+                        <a href="files/${book.file}" class="btn-dl" download>DOWNLOAD PDF</a>
+                    </div>
+                `;
+            });
+        }
+
+        // --- 3. THE INTERFACE ---
+        function setFilter(lvl) {
+            currentFilter = lvl;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(lvl) || (lvl === 'all' && btn.innerText.includes('All'))) {
+                    btn.classList.add('active');
+                }
+            });
+            updateDisplay();
+        }
+
+        // Run on start
+        window.onload = updateDisplay;
+    </script>
+</body>
+</html>
